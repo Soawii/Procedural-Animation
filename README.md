@@ -2,7 +2,7 @@
 Different examples of procedural animation, using a spine and joints connected to it.
 
 # Example
-![](https://imgur.com/a/xCQloFk)
+![](https://i.imgur.com/AnJdTAf.gif)
 
 # Download
 Download a .zip in releases, run the .exe in the bin folder.
