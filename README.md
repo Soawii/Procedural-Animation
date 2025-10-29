@@ -1,5 +1,5 @@
 # Procedural Animation
-Different examples of procedural animation using SFML, using a spine and joints connected to it.
+Different examples of procedural animation with SFML, using a spine and joints connected to it.
 
 # Example
 ![](https://i.imgur.com/AnJdTAf.gif)
