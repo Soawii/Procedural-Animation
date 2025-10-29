@@ -24,7 +24,7 @@ set(SFML_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
 set(SFML_BUILD_TEST_SUITE OFF CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(sfml)
 
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/ProceduralAnimation)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/ProceduralAnimation/bin)
 file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS src/*.cpp)
 add_executable(ProceduralAnimation ${SOURCES})
 
@@ -43,3 +43,10 @@ if(WIN32)
         COMMAND_EXPAND_LISTS
     )
 endif()
+
+add_custom_command(
+    TARGET ProceduralAnimation POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+            ${CMAKE_SOURCE_DIR}/resources
+            ${CMAKE_BINARY_DIR}/ProceduralAnimation/resources
+)
