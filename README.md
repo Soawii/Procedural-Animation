@@ -29,11 +29,11 @@ make
 ### 4. Run the resulting file  
 #### Windows:
 ```bash
-cd build/Procedural-Animation/bin/
+cd build/ProceduralAnimation/bin/
 ```
 And run the .exe
 #### Linux:  
 ```bash
-cd Procedural-Animation/bin/
+cd ProceduralAnimation/bin/
 ./ProceduralAnimation  
 ```  
