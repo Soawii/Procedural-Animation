@@ -163,9 +163,10 @@ int main() {
         text_speed->m_vars.color.setAll(ColorHSL(14,14,14));
         text_speed->m_context->dontUpdateYourself = true;
 
-        Slider* slider = new Slider(600.0f, 10.0f, 3000.0f, [&engine, number, slider]() {
+        Slider* slider = new Slider(600.0f, 10.0f, 3000.0f);
+        slider->m_onValueChanged = [&engine, number, slider]() {
             engine.m_context.m_sim->m_entities[engine.m_context.m_sim->m_chosen_entity]->m_velocity = slider->m_var;
-        });
+        };
         slider->m_vars.size.relative.setAll({0.7f, 0.0f});
         slider->m_sliderLine->m_vars.size.absolute.setAll({0.0f, 13.0f});
         slider->m_sliderLine->m_vars.color.setAll(ColorHSL(210,210,215));

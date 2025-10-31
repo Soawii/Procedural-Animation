@@ -1,4 +1,3 @@
-#pragma once
 #include "conf.hpp"
 
 namespace conf {

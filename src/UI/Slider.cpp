@@ -2,9 +2,8 @@
 #include "ShapePool.hpp"
 #include "ProgressBar.hpp"
 
-Slider::Slider(float start, float min, float max, std::function<void()> onValueChanged) 
+Slider::Slider(float start, float min, float max) 
 : m_min(min), m_max(max), m_var(start),
-    m_onValueChanged(onValueChanged),
     fill_rect({0.0f, 0.0f}, 1.0f, 1.0f, 0.0f)
 {
     m_sliderLine = new ProgressBar();

@@ -7,7 +7,7 @@
 
 class Slider : public UIElement {
 public:
-    Slider(float start, float min, float max, std::function<void()> onValueChanged = [](){});
+    Slider(float start, float min, float max);
     
     void update(MouseContext& mouseContext, KeyboardContext& keyboardContext) override;
     void checkChangedStates() override;
@@ -15,7 +15,7 @@ public:
     float m_sliderPadding = 10.0f;
     float m_min, m_max;
     float m_var;
-    std::function<void()> m_onValueChanged;
+    std::function<void()> m_onValueChanged = [](){};
     UIElement *m_sliderPoint;
     ProgressBar *m_sliderLine;
 private:
